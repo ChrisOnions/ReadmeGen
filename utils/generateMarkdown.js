@@ -1,10 +1,17 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+function renderLicenseBadge(license) {
+  if (license === "MIT")
+  return 'https://img.shields.io/badge/Licence-MIT-green'
+  // else if (license )
+ }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) { }
+function renderLicenseLink(license) {
+  return'https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>'
+ }
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -29,10 +36,10 @@ function generateMarkdown(data) {
   # General info :
   * ${data.generalinfo}
   **Github**
-  * ${Project.github}
+  * ${data.github}
   
   **Live Project**
-  * ${Project.Live}
+  * ${data.Live}
   
   # Built With:
   
