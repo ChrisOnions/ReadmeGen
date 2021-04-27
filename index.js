@@ -11,12 +11,15 @@ const questions = [
   {
     type: 'input',
     name: 'Title',
-    message: 'Name of project?',
+    message: 'Please enter name of the project?',
+    default: "New_project",
   },
   {
-    type: 'input',
+    type: 'list',
     name: 'licenece',
     message: 'What licenece would you like to use?',
+    choices: ["Apache license 2.0", "GNU GPLv3", "MIT", "Mozilla Public License 2.0"],
+    default: "MIT",
   },
   {
     type: 'input',
@@ -27,13 +30,13 @@ const questions = [
     type: 'input',
     name: 'Username',
     message: 'github Username',
-
+    default: 'Username',
   },
   {
     type: 'checkbox',
     name: 'Built_with',
     message: 'What did you use to build it ?',
-    Choices: ['Html', 'Css', 'ES6 Javascript', 'Node', 'NPM', 'Visual Studio Code', 'Reset.css']
+    choices: ['Html', 'Css', 'ES6 Javascript', 'Node', 'NPM', 'Visual Studio Code', 'Reset.css'],
   },
   {
     type: 'input',
@@ -51,9 +54,11 @@ const questions = [
     message: 'install instructions',
   },
   {
-    type: 'input',
+    type: 'list',
     name: 'pictures',
+    choices: ['Yes','No'],
     message: 'will the project be using pictures',
+    default: 'Yes',
   },
 ];
 
@@ -66,10 +71,11 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions)
-    .then(data => {
-      writeToFile("README.md", generateMarkdown(data))
-    })
+  inquirer.prompt(questions) 
+  .then(data => {
+    console.log(data);
+    writeToFile("README.md", generateMarkdown(data))
+  })
 }
 
 // Function call to initialize app
