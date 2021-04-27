@@ -1,23 +1,27 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license === "MIT"){
+  if (license === 'MIT'){
   return '![NPM](https://img.shields.io/badge/Licence-MIT-green)'
-  };
-  else if (license === "Apache license 2.0" ){
-  return'![Apache](https://img.shields.io/badge/Licence-Apache_2.0-green)'
-  };
+  }
+  else if (license === 'Apache license 2.0'){
+  return '![Apache](https://img.shields.io/badge/Licence-Apache_2.0-green)'
+  }
   else if (license === 'GNU GPLv3'){
-  return "![License: GPL v3](https://img.shields.io/badge/License_GPLv3+_blue)"
-  };
+  return '![License: GPL v3](https://img.shields.io/badge/License_GPLv3+_blue)'
+  }
   else if (license === 'Mozilla Public License 2.0'){
-    return "![Mozilla Public License 2.0](https://img.shields.io/badge/License_MPL_2.0_red)"
-  };
+    return '![Mozilla Public License 2.0](https://img.shields.io/badge/License_MPL_2.0_red)'
+  }
   else { 
-  return "No Licence Detected"
-  };
+  return 'No Licence Detected'
+  }
  };
-
+ function BuiltWith(items){
+   items.forEach(element => {
+    return `* ${element /n}`
+   });
+ }
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
@@ -55,11 +59,7 @@ function generateMarkdown(data) {
   
   # Built With:
   
-  * HTML
-  * Css
-  * reset.css
-  * Visual Studio Code
-  * ES6 Javascript
+  ${BuiltWith(data.Built_With)}
   
   # Aim :
     
