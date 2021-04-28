@@ -1,73 +1,58 @@
 
-  # undefined
- undefined
+  # ReadmeGen
+  
+  ### - Licences - 
+
+  ![License: GPL v3](https://img.shields.io/badge/Licence-GPLv3%2B-blue)
 
   ## Table of contents
+  
+  * [Description](#Description)
   * [Aim](#Aim)
-  * [Challenges](#Challenges)
   * [Prerequisites](#Prerequisites)
   * [Pictures](#Pictures)
-  * [Collaborators](#collaborators)
-  * [Technologies](#technologies)
   * [Links](#Links)
+  * [Contributing](#Contributing)  
+  * [Questions](#Questions)
   
-  # General info :
-  * undefined
-  **Github**
-  * undefined
+  # Description :
+
+  * This is a README.md Generator 
+
+  # GitHub links
+  **Repository**
+
+  * [Repository](https://github.com/ChrisOnions/ReadmeGen)
   
   **Live Project**
-  * undefined
   
-  # Built With:
+  *  [LIVE PROJECT](https://ChrisOnions.github.io/ReadmeGen)
   
-  * HTML
-  * Css
-  * reset.css
-  * Visual Studio Code
-  * ES6 Javascript
   
-  # Aim :
+  # Aim:
+
+   ie. This is a readme generator that hopes to help people create a well rounded readme 
     
-  Add here
-    
-  # Project Description:
-  
-  Project Description:
   
   # User Story:
+
+  As a user ..., I want ..., to be able to...,
   
-  [type of user...]
-  [goal...]
+  # Install instructions 
+
+  Please install node and use the NPM pacages provided
   
-  # Prerequisites :
+  ## Pictures:
+
+![404 image missing](./assets/Pictures / "Description")
+
+
   
-  Can be opened in any text editor workspace
+  ## Links
+
+Add links here
+  ## Questions
+Any questsions please email At - 
+
+Email - C.onions101@gmail.com
   
-  Check browser extentions from blocking application
-  
-  # Example
-  
-  * Visual studio code
-  * notepad++
-  
-  
-  # Collaborators
-  
-  
-  # Technologies
-  - FontAwesome
-  - Typekit
-  - JQuery
-  - Spotify
-  - The CocktailDB API
-  
-  ## Pictures :
-  
-  ![404 image missing](./assets/Pictures/ "Description")
-  ![404 image missing](./assets/Pictures/ "Description")
-  ![404 image missing](./assets/Pictures/ "Description")
-  
-  # Links
-  
-  Add links here

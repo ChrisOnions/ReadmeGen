@@ -1,111 +1,85 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  if (license === 'MIT'){
-  return '![NPM](https://img.shields.io/badge/Licence-MIT-green)'
+function renderLicenseBadge(Licence) {
+  console.log("the licenece is" + Licence)
+  if (Licence === 'MIT') {
+    return '![NPM](https://img.shields.io/badge/Licence-MIT-green)'
   }
-  else if (license === 'Apache license 2.0'){
-  return '![Apache](https://img.shields.io/badge/Licence-Apache_2.0-green)'
+  else if (Licence === 'Apache license 2.0') {
+    return '![Apache](https://img.shields.io/badge/Licence-Apache_2.0-green)'
   }
-  else if (license === 'GNU GPLv3'){
-  return '![License: GPL v3](https://img.shields.io/badge/License_GPLv3+_blue)'
+  else if (Licence === 'GNU GPLv3') {
+    return '![License: GPL v3](https://img.shields.io/badge/Licence-GPLv3%2B-blue)'
   }
-  else if (license === 'Mozilla Public License 2.0'){
-    return '![Mozilla Public License 2.0](https://img.shields.io/badge/License_MPL_2.0_red)'
+  else if (Licence === 'Mozilla Public License 2.0') {
+    return '![Mozilla Public License 2.0](https://img.shields.io/badge/Licence-License__MPL__2.0-red)'
   }
-  else { 
-  return 'No Licence Detected'
+  else {
+    return 'No Licence Detected'
   }
- };
- function BuiltWith(items){
-   items.forEach(element => {
-    return `* ${element /n}`
-   });
- }
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  return'https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>'
- }
+};
 
+function renderLicenseLink(Licence) {
+  return 'https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>'
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-
   return `
   # ${data.Title}
- ${renderLicenseBadge(data.license)}
+  
+  ### - Licences - 
+
+  ${renderLicenseBadge(data.Licence)}
 
   ## Table of contents
+  
+  * [Description](#Description)
   * [Aim](#Aim)
-  * [Challenges](#Challenges)
   * [Prerequisites](#Prerequisites)
   * [Pictures](#Pictures)
-  * [Collaborators](#collaborators)
-  * [Technologies](#technologies)
   * [Links](#Links)
+  * [Contributing](#Contributing)  
+  * [Questions](#Questions)
   
-  # General info :
-  * ${data.generalinfo}
-  **Github**
-  * ${'https://github.com/'+ data.Username+'/'+ data.Title}
+  # Description :
+
+  * ${data.Description}
+
+  # GitHub links
+  **Repository**
+
+  * [Repository]${'(https://github.com/' + data.Username + '/' + data.Title + ')'}
   
   **Live Project**
-  * ${'https://' + data.Username + '.github.io/' + data.Title}
   
-  # Built With:
+  *  [LIVE PROJECT]${'(https://' + data.Username + '.github.io/' + data.Title + ')'}
   
-  ${BuiltWith(data.Built_With)}
   
-  # Aim :
+  # Aim:
+
+  ${data.Aim}
     
-  Add here
-    
-  # Project Description:
-  
-  Project Description:
   
   # User Story:
+
+  ${data.User_Story}
   
-  [type of user...]
-  [goal...]
+  # Install instructions 
+
+  ${data.Install}
   
-  # Prerequisites :
+  ## Pictures:
+
+![404 image missing](./assets/Pictures / "Description")
+
+
   
-  Can be opened in any text editor workspace
-  
-  Check browser extentions from blocking application
-  
-  # Example
-  
-  * Visual studio code
-  * notepad++
-  
-  
-  # Collaborators
-  
-  
-  # Technologies
-  - FontAwesome
-  - Typekit
-  - JQuery
-  - Spotify
-  - The CocktailDB API
-  
-  ## Pictures :
-  
-  ![404 image missing](./assets/Pictures/ "Description")
-  ![404 image missing](./assets/Pictures/ "Description")
-  ![404 image missing](./assets/Pictures/ "Description")
-  
-  # Links
-  
-  Add links here
-`;
+  ## Links
+
+Add links here
+  ## Questions
+Any questsions please email At - 
+
+Email - ${data.Email}
+  `;
 }
 
 module.exports = generateMarkdown;
